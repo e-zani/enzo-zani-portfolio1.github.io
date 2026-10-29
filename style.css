@@ -1,0 +1,245 @@
+:root {
+  --lado: #28282B;
+  --fundo: #28282B;
+  --linha: #55555e;
+  --linha2: #8a8a94;
+  --cinza: #bbbbc4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--fundo);
+  color: white;
+  line-height: 1.6;
+}
+
+a {
+  color: white;
+}
+
+.tudo {
+  display: flex;
+  min-height: 100vh;
+}
+
+.lado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--lado);
+  padding: 32px 24px;
+  text-align: center;
+  border-right: 1px solid var(--linha);
+}
+
+.foto {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--linha2);
+  background: var(--lado);
+  margin-bottom: 16px;
+}
+
+.nome {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.curso {
+  font-size: 15px;
+  color: var(--cinza);
+  margin-bottom: 20px;
+}
+
+.info {
+  list-style: none;
+  text-align: left;
+  font-size: 14px;
+  padding: 16px 0;
+  border-top: 1px solid var(--linha);
+}
+
+.info li {
+  margin-bottom: 6px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--linha);
+  padding-top: 16px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  text-align: left;
+  font-size: 15px;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background: var(--fundo);
+}
+
+.direita {
+  margin-left: 320px;
+  padding: 48px 56px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.secao {
+  margin-bottom: 72px;
+  scroll-margin-top: 32px;
+}
+
+h2 {
+  font-size: 29px;
+  border-bottom: 2px solid var(--linha2);
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 24px 0 10px 0;
+}
+
+h4 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+ul {
+  padding-left: 22px;
+  margin-bottom: 12px;
+}
+
+.card {
+  background: var(--lado);
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+dt {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--cinza);
+  margin-top: 14px;
+}
+
+dd {
+  margin-left: 0;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--fundo);
+  border: 1px solid var(--linha2);
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 2px 4px 2px 0;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--fundo);
+  border: 2px solid var(--linha2);
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.botao:hover {
+  border-color: white;
+}
+
+.tempo {
+  list-style: none;
+  padding-left: 18px;
+  border-left: 3px solid var(--linha2);
+}
+
+.tempo li {
+  margin-bottom: 18px;
+  padding-left: 8px;
+}
+
+.periodo {
+  display: block;
+  font-size: 13px;
+  color: var(--cinza);
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.links a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--linha2);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.links a:hover {
+  background: var(--lado);
+  border-color: white;
+}
+
+@media (max-width: 800px) {
+  .lado {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--linha);
+  }
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .direita {
+    margin-left: 0;
+    padding: 32px 20px;
+  }
+}
